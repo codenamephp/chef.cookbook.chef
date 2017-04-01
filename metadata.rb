@@ -8,6 +8,7 @@ version '0.1.0'
 issues_url 'https://github.com/codenamephp/chef.cookbook.cookbooks/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/codenamephp/chef.cookbook.cookbooks' if respond_to?(:source_url)
 
-depends 'dev'
+depends 'apt'
+depends 'chef.cookbook.dev'
 
-supports 'debian', '~>8'
+supports 'debian', '~>8.5'
