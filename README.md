@@ -1,6 +1,6 @@
 # Chef Cookbook Cookbooks
 
-The default cookbook gets the environment ready to develop chef cookbooks by installing chefdk, vagrant, ruby, virtualbox, ...
+The default cookbook gets the environment ready to develop chef cookbooks by installing chefdk, vagrant and virtualbox.
 
 ## Requirements
 
@@ -14,6 +14,7 @@ The default cookbook gets the environment ready to develop chef cookbooks by ins
 
 ### Cookbook Depdendencies
 
+- apt
 - chef.cookbook.dev
 
 ## Usage
