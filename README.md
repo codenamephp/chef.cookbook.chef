@@ -22,7 +22,7 @@ The default cookbook gets the environment ready to develop chef cookbooks by ins
 Add the cookbook to your Berksfile:
 
 ```ruby
-cookbook 'chef.cookbook.cookbooks', '~> 0.1.0', :github 'codenamephp/chef.cookbook.cookbooks'
+cookbook 'chef.cookbook.cookbooks', '~> 0.1.0', github: 'codenamephp/chef.cookbook.cookbooks'
 ```
 
 Add the cookbook to your runlist, e.g. in a role:
