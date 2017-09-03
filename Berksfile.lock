@@ -8,7 +8,7 @@ GRAPH
   build-essential (8.0.0)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
-  chef.cookbook.cookbooks (0.1.0)
+  chef.cookbook.cookbooks (0.3.0)
     apt (>= 0.0.0)
     chef.cookbook.dev (>= 0.0.0)
   chef.cookbook.dev (0.1.0)

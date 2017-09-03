@@ -6,7 +6,7 @@ The default cookbook gets the environment ready to develop chef cookbooks by ins
 
 ### Supported Platforms
 
-- Debian Jessie
+- Debian Stretch
 
 ### Chef
 

@@ -46,4 +46,4 @@ Cheffile.lock
 
 # vagrant stuff
 .vagrant/
-.vagrant.d/
+.vagrant.d/.kitchen/
