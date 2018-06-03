@@ -1,14 +1,21 @@
 ---
 driver:
   name: vagrant
+
 provisioner:
   name: chef_solo
 
+verifier:
+  name: inspec
+
 platforms:
-  - name: debian-9.1
+  - name: debian-9.2
 
 suites:
   - name: default
     run_list:
-      - recipe[chef.cookbook.cookbooks::default]
+      - recipe[codenamephp_chef::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
     attributes:
