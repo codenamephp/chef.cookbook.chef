@@ -1,7 +1,24 @@
 # Change Log
 
-## [1.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/1.0.0) (2018-06-03)
-[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/0.2.0...1.0.0)
+## [Unreleased](https://github.com/codenamephp/chef.cookbook.chef/tree/HEAD)
+
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/v1.0.0...HEAD)
+
+**Implemented enhancements:**
+
+- Add chef shell init [\#4](https://github.com/codenamephp/chef.cookbook.chef/issues/4)
+- Omnitruck seems to be downloaded every time [\#2](https://github.com/codenamephp/chef.cookbook.chef/issues/2)
+
+**Fixed bugs:**
+
+- Omnitruck seems to be downloaded every time [\#2](https://github.com/codenamephp/chef.cookbook.chef/issues/2)
+
+## [v1.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/v1.0.0) (2018-06-03)
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/0.2.0...v1.0.0)
+
+**Implemented enhancements:**
+
+- Release 1.0.0 [\#3](https://github.com/codenamephp/chef.cookbook.chef/pull/3) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Closed issues:**
 

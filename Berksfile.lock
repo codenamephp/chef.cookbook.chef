@@ -5,3 +5,5 @@ DEPENDENCIES
 
 GRAPH
   codenamephp_chef (1.0.0)
+    line (~> 2.0.0)
+  line (2.0.0)
