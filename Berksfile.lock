@@ -1,7 +1,7 @@
 DEPENDENCIES
-  chef.cookbook.cookbooks
+  codenamephp_chef
     path: .
     metadata: true
 
 GRAPH
-  chef.cookbook.cookbooks (0.3.0)
+  codenamephp_chef (0.3.1)

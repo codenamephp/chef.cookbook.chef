@@ -1,6 +1,6 @@
-# Chef Cookbook Cookbooks
+# Chef Cookbook Chef
 
-The default cookbook gets the environment ready to develop chef cookbooks by installing chefdk, vagrant and virtualbox.
+The default cookbook gets the environment ready to develop chef cookbooks by installing chefdk
 
 ## Requirements
 
@@ -14,15 +14,12 @@ The default cookbook gets the environment ready to develop chef cookbooks by ins
 
 ### Cookbook Depdendencies
 
-- apt
-- chef.cookbook.dev
-
 ## Usage
 
 Add the cookbook to your Berksfile:
 
 ```ruby
-cookbook 'chef.cookbook.cookbooks', '~> 0.3.0', github: 'codenamephp/chef.cookbook.cookbooks'
+cookbook 'codenamephp_chef', '~> 1.0.0'
 ```
 
 Add the cookbook to your runlist, e.g. in a role:
@@ -33,7 +30,7 @@ Add the cookbook to your runlist, e.g. in a role:
   "chef_type": "role",
   "json_class": "Chef::Role",
   "run_list": [
-	  "recipe[chef.cookbook.cookbooks]"
+	  "recipe[codenamephp_chef]"
   ]
 }
 ```

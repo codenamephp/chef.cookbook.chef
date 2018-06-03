@@ -1,9 +1,9 @@
-name 'chef.cookbook.cookbooks'
+name 'codenamephp_chef'
 maintainer 'Bastian Schwarz'
 maintainer_email 'basitan@codename-php.de'
 license 'Apache-2.0'
-description 'Gets the environment ready to develop chef cookbooks by installing chefdk, vagrant, ruby, virtualbox, ...'
-long_description 'Gets the environment ready to develop chef cookbooks by installing chefdk, vagrant, ruby, virtualbox, ...'
+description 'Gets the environment ready to develop chef cookbooks by installing chefdk'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '0.3.1'
 chef_version '>= 13.0' if respond_to?(:chef_version)
 issues_url 'https://github.com/codenamephp/chef.cookbook.cookbooks/issues' if respond_to?(:issues_url)
