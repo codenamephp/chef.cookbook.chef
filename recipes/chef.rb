@@ -12,3 +12,8 @@ file 'Delete omnitruck install script' do
   action :nothing
   path '/tmp/install.sh'
 end
+
+append_if_no_line 'add shell init to global .bashrc' do
+  path '/etc/bash.bashrc'
+  line 'eval "$(chef shell-init bash)"'
+end

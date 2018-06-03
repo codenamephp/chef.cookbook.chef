@@ -10,3 +10,5 @@ issues_url 'https://github.com/codenamephp/chef.cookbook.cookbooks/issues' if re
 source_url 'https://github.com/codenamephp/chef.cookbook.cookbooks' if respond_to?(:source_url)
 
 supports 'debian', '~>9.1'
+
+depends 'line', '~>2.0.0'
