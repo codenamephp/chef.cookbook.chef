@@ -4,4 +4,4 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  codenamephp_chef (0.3.1)
+  codenamephp_chef (1.0.0)

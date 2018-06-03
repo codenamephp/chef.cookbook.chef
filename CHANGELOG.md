@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/1.0.0) (2018-06-03)
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/0.2.0...1.0.0)
+
+**Closed issues:**
+
+- Rename cookbook [\#1](https://github.com/codenamephp/chef.cookbook.chef/issues/1)
+
 ## [0.2.0](https://github.com/codenamephp/chef.cookbook.chef/tree/0.2.0) (2017-04-02)
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/[0.2.0] - 2017-04-02...0.2.0)
 
