@@ -9,21 +9,25 @@ require 'spec_helper'
 describe 'codenamephp_chef::default' do
   context 'When all attributes are default (except ohai detected)' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new do |node|
-        node.automatic['etc']['passwd'] = {
-          'user1' => { 'dir' => '/home/dir1' },
-          'user2' => { 'dir' => '/home/dir2' },
-          'user3' => { 'dir' => '/home/dir3' }
-        }
-      end.converge(described_recipe)
+      runner = ChefSpec::SoloRunner.new
+      runner.converge(described_recipe)
     end
+    before do
+      stub_command('dpkg -l chefdk').and_return(true)
+    end
+
     let(:execute) { chef_run.execute('curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk') }
 
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'can install chefdk using omintruk script' do
+    it 'will not install chefdk when the package is already installed' do
+      expect(chef_run).to_not run_execute('curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk')
+    end
+
+    it 'can install chefdk using omintruk script when package is not yet installed' do
+      stub_command('dpkg -l chefdk').and_return(false)
       expect(chef_run).to run_execute('curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk')
     end
 
