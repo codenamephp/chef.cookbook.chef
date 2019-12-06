@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # Cookbook:: codenamephp_chef
 # Spec:: default
@@ -43,6 +45,10 @@ describe 'codenamephp_chef::default' do
 
     it 'will add shell init to all users with .bashrc file' do
       expect(chef_run).to does_append_if_no_line('add shell init to global .bashrc')
+    end
+
+    it 'will add shell init to all users with .bashrc file' do
+      expect(chef_run).to does_append_if_no_line('add USE_DOKKEN to global .bashrc')
     end
   end
 end
