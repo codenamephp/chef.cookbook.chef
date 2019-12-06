@@ -8,7 +8,7 @@ Layout/EndOfLine:
   EnforcedStyle: lf
 
 Metrics/LineLength:
-  Max: 160
+  Max: 200
 
 Metrics/BlockLength:
   Exclude:
