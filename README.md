@@ -1,4 +1,5 @@
 # Chef Cookbook Chef
+[![Build Status](https://travis-ci.org/codenamephp/chef.cookbook.chef.svg?branch=dev)](https://travis-ci.org/codenamephp/chef.cookbook.chef)
 
 The default cookbook gets the environment ready to develop chef cookbooks by installing chefdk
 

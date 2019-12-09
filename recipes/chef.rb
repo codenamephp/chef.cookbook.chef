@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 package 'Install curl' do
   package_name 'curl'
 end
@@ -17,4 +19,14 @@ end
 append_if_no_line 'add shell init to global .bashrc' do
   path '/etc/bash.bashrc'
   line 'eval "$(chef shell-init bash)"'
+end
+
+append_if_no_line 'add USE_DOKKEN to global .bashrc' do
+  path '/etc/bash.bashrc'
+  line 'export USE_DOKKEN=true'
+end
+
+append_if_no_line 'add KITCHEN_LOCAL_YAML to global .bashrc' do
+  path '/etc/bash.bashrc'
+  line 'export KITCHEN_LOCAL_YAML=.kitchen.dokken.yml'
 end
