@@ -36,7 +36,7 @@ control 'chef-1.0' do
     it { should exist }
     its('content') { should match(Regexp.new(Regexp.quote('export USE_DOKKEN=true'))) }
   end
-  
+
   describe file('/etc/bash.bashrc') do
     it { should exist }
     its('content') { should match(Regexp.new(Regexp.quote('export KITCHEN_LOCAL_YAML=.kitchen.dokken.yml'))) }
