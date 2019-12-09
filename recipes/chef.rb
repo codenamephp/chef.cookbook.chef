@@ -25,3 +25,8 @@ append_if_no_line 'add USE_DOKKEN to global .bashrc' do
   path '/etc/bash.bashrc'
   line 'export USE_DOKKEN=true'
 end
+
+append_if_no_line 'add KITCHEN_LOCAL_YAML to global .bashrc' do
+  path '/etc/bash.bashrc'
+  line 'export KITCHEN_LOCAL_YAML=.kitchen.dokken.yml'
+end
