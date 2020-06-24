@@ -1,0 +1,4 @@
+# This file is managed by chef. Changes will be overwritten
+
+eval "$(chef shell-init bash)"
+export PATH="/opt/chef-workstation/embedded/bin:$PATH"
