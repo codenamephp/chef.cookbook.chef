@@ -1,5 +1,30 @@
 # Change Log
 
+## [2.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/2.0.0) (2020-06-24)
+
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/v1.1.0...2.0.0)
+
+**Implemented enhancements:**
+
+- Move to Chef Workstation [\#19](https://github.com/codenamephp/chef.cookbook.chef/issues/19)
+- Add local kitchen dokken file as ENV [\#13](https://github.com/codenamephp/chef.cookbook.chef/issues/13)
+- Accept chef license [\#12](https://github.com/codenamephp/chef.cookbook.chef/issues/12)
+- Set bash env [\#11](https://github.com/codenamephp/chef.cookbook.chef/issues/11)
+- Move to debian buster [\#10](https://github.com/codenamephp/chef.cookbook.chef/issues/10)
+- Update travis build [\#9](https://github.com/codenamephp/chef.cookbook.chef/issues/9)
+- \[RELEASE 2.1.0\] [\#16](https://github.com/codenamephp/chef.cookbook.chef/pull/16) ([bastianschwarz](https://github.com/bastianschwarz))
+- \[RELEASE 2.1.0\] [\#15](https://github.com/codenamephp/chef.cookbook.chef/pull/15) ([bastianschwarz](https://github.com/bastianschwarz))
+- \[RELEASE 2.1.0\] [\#14](https://github.com/codenamephp/chef.cookbook.chef/pull/14) ([bastianschwarz](https://github.com/bastianschwarz))
+
+**Closed issues:**
+
+- Change slack notifications [\#18](https://github.com/codenamephp/chef.cookbook.chef/issues/18)
+- Deployment failing [\#17](https://github.com/codenamephp/chef.cookbook.chef/issues/17)
+
+**Merged pull requests:**
+
+- \#19 workstation resource [\#21](https://github.com/codenamephp/chef.cookbook.chef/pull/21) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [Unreleased](https://github.com/codenamephp/chef.cookbook.chef/tree/HEAD)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/v1.0.0...HEAD)
