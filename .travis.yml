@@ -1,51 +1,49 @@
-language: ruby
-dist: xenial
+addons:
+  apt:
+    sources:
+      - chef-current-xenial
+    packages:
+      - chef-workstation
 
 branches:
   only:
   - master
-  - dev
-  - "/^v\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$/"
+  - /^\d+\.\d+(\.\d+)?(-\S*)?$/
 
 services: docker
 
 env:
   global:
-  - CHEF_LICENSE=accept
-  - ENV="ci"
-  - secure: 4E8X5K2DTCorKESSqhFWO4UsTVUuoGO9uVO7Vol9obe/dH/PqQvGLmJ7zzr5TTxbaZZw89JJTo22Czxcita/f1hcZTD4xjNP2dEPTjfF2yW3t2M2796FwYkXvNMSaXg1x8nVTw0YsNZmby/Yx20mnTDK5vRb+zPMfsCENUOw48rx4PeRh+ko8WRACrJb+6FUlQ8gOrTLoiuOkkydwzLt0k0kiLh3P/tFCYS5bkxrhXKeX6ivIlROPRVkwE69r9ARCiBoGqQL0gZ6DH7+X5Psxw3ryh+AT16xnUXApp8cCCxY12Iau4p65wB+rOP2JBgNgKyvvh4YqQoh30Cjv8vQHB3htg2hQHJiLwcMRkj5B02mxGQxEoSEi9M8hmYwGcUHVbCM4a8APsaBPX0s+bL/pHlxz3lNvXBpl6mqG5rjGY+S+lskNiAPSBWRmZVz0AdFeBiXHUe5pZR7Nk0eUpsJ5vFhrXPqbtVfhIw43J3mYvTlythGHyoWrOUFGiGGqRy9ALDpQJszGdJJiTJZUfTq2WgfuH8PzOuEVCY8lIfZ0R94O+o4jrRwngx0p2AeyZ0Ojg1jd1qyXGs7pOpvhXTusgxsD+cM6rIKXhpWegKMZZ3kzKELlNrSYSaoCCfFJWPkr6zywAjpxQEcENWUevzRqKiSoS3oGLFroHs/D4JjhMI=
-
-addons:
-  apt:
-    sources:
-    - chef-current-xenial
-    packages:
-    - chefdk
+    - CHEF_LICENSE=accept
+    - KITCHEN_LOCAL_YAML=kitchen.dokken.yml
+    - secure: 4E8X5K2DTCorKESSqhFWO4UsTVUuoGO9uVO7Vol9obe/dH/PqQvGLmJ7zzr5TTxbaZZw89JJTo22Czxcita/f1hcZTD4xjNP2dEPTjfF2yW3t2M2796FwYkXvNMSaXg1x8nVTw0YsNZmby/Yx20mnTDK5vRb+zPMfsCENUOw48rx4PeRh+ko8WRACrJb+6FUlQ8gOrTLoiuOkkydwzLt0k0kiLh3P/tFCYS5bkxrhXKeX6ivIlROPRVkwE69r9ARCiBoGqQL0gZ6DH7+X5Psxw3ryh+AT16xnUXApp8cCCxY12Iau4p65wB+rOP2JBgNgKyvvh4YqQoh30Cjv8vQHB3htg2hQHJiLwcMRkj5B02mxGQxEoSEi9M8hmYwGcUHVbCM4a8APsaBPX0s+bL/pHlxz3lNvXBpl6mqG5rjGY+S+lskNiAPSBWRmZVz0AdFeBiXHUe5pZR7Nk0eUpsJ5vFhrXPqbtVfhIw43J3mYvTlythGHyoWrOUFGiGGqRy9ALDpQJszGdJJiTJZUfTq2WgfuH8PzOuEVCY8lIfZ0R94O+o4jrRwngx0p2AeyZ0Ojg1jd1qyXGs7pOpvhXTusgxsD+cM6rIKXhpWegKMZZ3kzKELlNrSYSaoCCfFJWPkr6zywAjpxQEcENWUevzRqKiSoS3oGLFroHs/D4JjhMI=
 
 install:
 - openssl aes-256-cbc -K $encrypted_dbbf163e797a_key -iv $encrypted_dbbf163e797a_iv -in codenamephp.pem.enc -out codenamephp.pem -d
 - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
 - eval "$(chef shell-init bash)"
-- chef --version
-- cookstyle --version
-- foodcritic --version
 
 script:
-- chef exec rake
+  - chef exec foodcritic .
+  - chef exec rubocop
+  - chef exec rspec
+  - chef exec kitchen test
+
 
 before_deploy:
-- git config --local user.name "Travis CI"
-- git config --local user.email "travis@codename-php.de"
-- git remote set-url --push origin "https://$GH_TOKEN@github.com/codenamephp/chef.cookbook.chef.git"
-
+  - chef exec knife cookbook metadata from file metadata.rb
 deploy:
-- provider: script
+  provider: chef_supermarket
+  user_id: "codenamephp"
+  client_key: "codenamephp.pem"
+  name: "codenamephp_bash"
+  category: "Utilities"
+  edge: true
+  run:
+    - chef exec berks upload -e test
   on:
-    branch: master
-  skip_cleanup: true
-  script: git status && chef exec rake release
-
+    tags: true
 notifications:
   slack:
     rooms:
-      secure: HT+/vooY1dCiY5b53LDQgaHbZbEwd2OphZzvUcEOeFvSZlgRlgHYHeWAA7G69DB+2XY4TovpVo+qHS6uWoT+M96MV/f4ZYatlmmW8RNALAevSRVpkHvoYeW/NnZezWUGaP9XCZ4nemvGdnmYaTd8rKJiK8yvKWLnEGHbB3r2U3wJUMk8qA81aTWEc8U6OaLuEeiVGsCdtuXuZJywdS7N07QtcCOuRAkL9L7mQSATqj1vV2LnkxS/BBFUyLgh4MsbmjaQHwqjt8Gg5pzXc0aVxuqyszYncMwKonCVzS/CGQfKnxXQX8CRawXPyqncQjwXD4zPWKGcsNqnXelMU4tLHkr9UhJdTpEWAbAnL6Z+Z7UyQA+Fzs1mP8boxIjZjOqQksi/DB59XydacX5hLH8a2KsmEKg9QkK8XbhkMG91VKbSDQnfxFivXvkJLI+R5HJktb7ucw+37oALGtAwj6q0M7SYt1RvO2so3mEzbk7DO4lYgpODJB0kLu86jD/XwJPSTJzHrAoflVYJIbLLW+MZMGN6YZSZivTuJS80SJtocxjoCJt6DPP3CcN8DebXnPrKCv3Khv/5075F/gOD6hq1mRgdHxe+d8bJecmMKcmxvcjbVujlC2GhCVgEtAIsvkJXfjYfkNp29ry9WyoNVaN3AL+wpMqd59y051OD7ik2ELQ=
+      - secure: HT+/vooY1dCiY5b53LDQgaHbZbEwd2OphZzvUcEOeFvSZlgRlgHYHeWAA7G69DB+2XY4TovpVo+qHS6uWoT+M96MV/f4ZYatlmmW8RNALAevSRVpkHvoYeW/NnZezWUGaP9XCZ4nemvGdnmYaTd8rKJiK8yvKWLnEGHbB3r2U3wJUMk8qA81aTWEc8U6OaLuEeiVGsCdtuXuZJywdS7N07QtcCOuRAkL9L7mQSATqj1vV2LnkxS/BBFUyLgh4MsbmjaQHwqjt8Gg5pzXc0aVxuqyszYncMwKonCVzS/CGQfKnxXQX8CRawXPyqncQjwXD4zPWKGcsNqnXelMU4tLHkr9UhJdTpEWAbAnL6Z+Z7UyQA+Fzs1mP8boxIjZjOqQksi/DB59XydacX5hLH8a2KsmEKg9QkK8XbhkMG91VKbSDQnfxFivXvkJLI+R5HJktb7ucw+37oALGtAwj6q0M7SYt1RvO2so3mEzbk7DO4lYgpODJB0kLu86jD/XwJPSTJzHrAoflVYJIbLLW+MZMGN6YZSZivTuJS80SJtocxjoCJt6DPP3CcN8DebXnPrKCv3Khv/5075F/gOD6hq1mRgdHxe+d8bJecmMKcmxvcjbVujlC2GhCVgEtAIsvkJXfjYfkNp29ry9WyoNVaN3AL+wpMqd59y051OD7ik2ELQ=
