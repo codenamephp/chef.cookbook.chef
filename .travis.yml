@@ -45,5 +45,7 @@ deploy:
     tags: true
 notifications:
   slack:
+    on_success: never
+    on_failure: always
     rooms:
       - secure: HT+/vooY1dCiY5b53LDQgaHbZbEwd2OphZzvUcEOeFvSZlgRlgHYHeWAA7G69DB+2XY4TovpVo+qHS6uWoT+M96MV/f4ZYatlmmW8RNALAevSRVpkHvoYeW/NnZezWUGaP9XCZ4nemvGdnmYaTd8rKJiK8yvKWLnEGHbB3r2U3wJUMk8qA81aTWEc8U6OaLuEeiVGsCdtuXuZJywdS7N07QtcCOuRAkL9L7mQSATqj1vV2LnkxS/BBFUyLgh4MsbmjaQHwqjt8Gg5pzXc0aVxuqyszYncMwKonCVzS/CGQfKnxXQX8CRawXPyqncQjwXD4zPWKGcsNqnXelMU4tLHkr9UhJdTpEWAbAnL6Z+Z7UyQA+Fzs1mP8boxIjZjOqQksi/DB59XydacX5hLH8a2KsmEKg9QkK8XbhkMG91VKbSDQnfxFivXvkJLI+R5HJktb7ucw+37oALGtAwj6q0M7SYt1RvO2so3mEzbk7DO4lYgpODJB0kLu86jD/XwJPSTJzHrAoflVYJIbLLW+MZMGN6YZSZivTuJS80SJtocxjoCJt6DPP3CcN8DebXnPrKCv3Khv/5075F/gOD6hq1mRgdHxe+d8bJecmMKcmxvcjbVujlC2GhCVgEtAIsvkJXfjYfkNp29ry9WyoNVaN3AL+wpMqd59y051OD7ik2ELQ=
