@@ -5,10 +5,10 @@ addons:
     packages:
       - chef-workstation
 
-if: |
-  branch = master OR \
-  tag =~ /^\d+\.\d+(\.\d+)?(-\S*)?$/ OR \
-  commit_message !~ /\[CHANGELOG\]/
+branches:
+  only:
+  - master
+  - /^\d+\.\d+(\.\d+)?(-\S*)?$/
 
 services: docker
 
