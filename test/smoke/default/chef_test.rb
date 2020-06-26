@@ -19,5 +19,6 @@ control 'chef-1.0' do
 
   describe bash('sudo -iHu user1 printenv') do
     its('stdout') { should match(%r{PATH=/opt/chef-workstation/}) }
+    its('stdout') { should match(/KITCHEN_LOCAL_YAML=kitchen.dokken.yml/) }
   end
 end
