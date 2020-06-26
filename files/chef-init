@@ -2,3 +2,5 @@
 
 eval "$(chef shell-init bash)"
 export PATH="/opt/chef-workstation/embedded/bin:$PATH"
+
+export KITCHEN_LOCAL_YAML=kitchen.dokken.yml
