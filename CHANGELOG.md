@@ -1,5 +1,14 @@
 # Change Log
 
+## [2.1.1](https://github.com/codenamephp/chef.cookbook.chef/tree/2.1.1) (2020-06-26)
+
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/2.1.0...2.1.1)
+
+**Fixed bugs:**
+
+- Warning when starting bash [\#25](https://github.com/codenamephp/chef.cookbook.chef/issues/25)
+- Removed double ruby path from chef-init [\#26](https://github.com/codenamephp/chef.cookbook.chef/pull/26) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [2.1.0](https://github.com/codenamephp/chef.cookbook.chef/tree/2.1.0) (2020-06-26)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/2.0.0...2.1.0)
