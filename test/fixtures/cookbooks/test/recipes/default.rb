@@ -6,6 +6,7 @@ user 'create user 1' do
   shell '/bin/bash'
 end
 
+codenamephp_chef_repository 'Add chef repository'
 codenamephp_chef_workstation 'Install chef-workstation'
 codenamephp_chef_environment 'Setup chef environment' do
   users ['user1']

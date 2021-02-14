@@ -10,7 +10,7 @@ describe 'codenamephp_chef_environment' do
   context 'Minimal properties' do
     recipe do
       codenamephp_chef_environment 'Setup chef' do
-        users %w[user1 user2]
+        users %w(user1 user2)
       end
     end
 
@@ -20,7 +20,7 @@ describe 'codenamephp_chef_environment' do
 
     it 'adds bash init' do
       expect(chef_run).to add_codenamephp_bash_cookbook_file('setup bash').with(
-        users: %w[user1 user2],
+        users: %w(user1 user2),
         filename: '100-chef',
         cookbook_file: 'chef-init',
         cookbook: 'codenamephp_chef',
@@ -32,7 +32,7 @@ describe 'codenamephp_chef_environment' do
   context 'With skel set to true' do
     recipe do
       codenamephp_chef_environment 'Setup chef' do
-        users %w[user1 user2]
+        users %w(user1 user2)
         skel true
       end
     end
@@ -43,7 +43,7 @@ describe 'codenamephp_chef_environment' do
 
     it 'adds bash init' do
       expect(chef_run).to add_codenamephp_bash_cookbook_file('setup bash').with(
-        users: %w[user1 user2],
+        users: %w(user1 user2),
         filename: '100-chef',
         cookbook_file: 'chef-init',
         cookbook: 'codenamephp_chef',

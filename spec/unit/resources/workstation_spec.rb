@@ -20,13 +20,8 @@ describe 'codenamephp_chef_workstation' do
       expect(chef_run).to purge_package('purge chefdk').with(package_name: 'chefdk')
     end
 
-    it 'adds chef repository to apt' do
-      expect(chef_run).to add_apt_repository('add chef repository to apt').with(
-        key: ['https://packages.chef.io/chef.asc'],
-        repo_name: 'chef-stable',
-        uri: 'https://packages.chef.io/repos/apt/stable',
-        components: ['main']
-      )
+    it 'doesnt add repository to apt' do
+      expect(chef_run).to_not add_codenamephp_chef_repository('add chef repository')
     end
 
     it 'installs chef-workstation' do
@@ -47,6 +42,22 @@ describe 'codenamephp_chef_workstation' do
 
     it 'will not purge chefdk' do
       expect(chef_run).to_not purge_package('purge chefdk')
+    end
+  end
+
+  context 'With add_default_chef_repo set to true' do
+    recipe do
+      codenamephp_chef_workstation 'Install chef-workstation' do
+        add_default_chef_repo true
+      end
+    end
+
+    it 'converges successfully' do
+      expect { chef_run }.to_not raise_error
+    end
+
+    it 'adds repository to apt' do
+      expect(chef_run).to add_codenamephp_chef_repository('add chef repository')
     end
   end
 end
