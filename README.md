@@ -103,15 +103,14 @@ The `codenamephp_chef_repository` resource adds the chef repository to apt so th
 #### Examples
 ```ruby
 # Minimal properties
-codenamephp_chef_environment 'Setup chef' do
+codenamephp_chef_repository 'Add chef repo' do
   users %w[user1 user2]
 end
 
-# also manage skel
+# use stable
 recipe do
-  codenamephp_chef_environment 'Setup chef' do
-    users %w[user1 user2]
-    skel true
+  codenamephp_chef_repository 'Add chef repo with stable' do
+    channel 'stable'
   end
 end
 ```
