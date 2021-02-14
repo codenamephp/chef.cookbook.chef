@@ -1,5 +1,5 @@
 # Chef Cookbook Chef
-[![Build Status](https://travis-ci.com/codenamephp/chef.cookbook.chef.svg?branch=master)](https://travis-ci.com/codenamephp/chef.cookbook.chef)
+![CI](https://github.com/codenamephp/chef.cookbook.chef/workflows/CI/badge.svg)
 
 The default cookbook gets the environment ready to develop chef cookbooks by installing chef-workstation.
 
