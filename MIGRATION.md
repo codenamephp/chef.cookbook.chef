@@ -2,7 +2,7 @@
 
 The repository isn't added automatically anymore. Also the 'current' channel is now the default (was 'stable' before).
 
-To keep the current behaviour add the `codenamephp_chef_repository` resource first and set the `channel` property to 'stable'
+To keep the current behavior add the `codenamephp_chef_repository` resource first and set the `channel` property to 'stable'
 
 ```ruby
 codenamephp_chef_workstation 'Install chef-workstation'
