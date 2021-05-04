@@ -4,6 +4,7 @@ driver:
 
 provisioner:
   name: chef_solo
+  deprecations_as_errors: true
 
 verifier:
   name: inspec
