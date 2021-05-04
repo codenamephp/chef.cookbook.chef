@@ -1,3 +1,4 @@
+unified_mode true
 property :channel, %w(stable current), default: 'current', description: 'The channel to use for the repository'
 
 action :add do
