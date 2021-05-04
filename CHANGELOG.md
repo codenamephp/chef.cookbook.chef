@@ -7,6 +7,7 @@
 **Implemented enhancements:**
 
 - Add option to select current/stable repo [\#28](https://github.com/codenamephp/chef.cookbook.chef/issues/28)
+- Set unified\_mode true in all resources [\#35](https://github.com/codenamephp/chef.cookbook.chef/pull/35) ([bastianschwarz](https://github.com/bastianschwarz))
 - Add repository resource with option for channel [\#29](https://github.com/codenamephp/chef.cookbook.chef/pull/29) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [2.1.1](https://github.com/codenamephp/chef.cookbook.chef/tree/2.1.1) (2020-06-26)
@@ -46,6 +47,7 @@
 - Set bash env [\#11](https://github.com/codenamephp/chef.cookbook.chef/issues/11)
 - Move to debian buster [\#10](https://github.com/codenamephp/chef.cookbook.chef/issues/10)
 - Update travis build [\#9](https://github.com/codenamephp/chef.cookbook.chef/issues/9)
+- \[RELEASE 2.1.0\] [\#16](https://github.com/codenamephp/chef.cookbook.chef/pull/16) ([bastianschwarz](https://github.com/bastianschwarz))
 - \[RELEASE 2.1.0\] [\#15](https://github.com/codenamephp/chef.cookbook.chef/pull/15) ([bastianschwarz](https://github.com/bastianschwarz))
 - \[RELEASE 2.1.0\] [\#14](https://github.com/codenamephp/chef.cookbook.chef/pull/14) ([bastianschwarz](https://github.com/bastianschwarz))
 
@@ -67,7 +69,6 @@
 
 - Add chef shell init [\#4](https://github.com/codenamephp/chef.cookbook.chef/issues/4)
 - Omnitruck seems to be downloaded every time [\#2](https://github.com/codenamephp/chef.cookbook.chef/issues/2)
-- \[RELEASE 2.1.0\] [\#16](https://github.com/codenamephp/chef.cookbook.chef/pull/16) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Merged pull requests:**
 
