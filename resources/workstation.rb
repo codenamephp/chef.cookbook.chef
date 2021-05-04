@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+unified_mode true
 property :purge_chefdk, [true, false], default: true, description: 'Flag if the chefdk package should be purged before installing chef workstation'
 property :add_default_chef_repo, [true, false], default: false, description: 'Flag if the default repo should be added using the codenamephp_chef_repository resource with default parameters'
 
