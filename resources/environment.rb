@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+unified_mode true
 property :users, Array, required: true, description: 'An array of usernames to setup the environment for'
 property :skel, [true, false], default: false, description: 'Flag if /etc/skel should receive the environment too for newly created users, defaults to false'
 
