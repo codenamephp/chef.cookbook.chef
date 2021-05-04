@@ -13,6 +13,8 @@
 **Merged pull requests:**
 
 - Bump tubone24/update\_release from v1.1.0 to v1.2.0 [\#34](https://github.com/codenamephp/chef.cookbook.chef/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump bobheadxi/deployments from v0.4.3 to v0.5.2 [\#33](https://github.com/codenamephp/chef.cookbook.chef/pull/33) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump dev-drprasad/delete-tag-and-release from v0.1.3 to v0.2.0 [\#32](https://github.com/codenamephp/chef.cookbook.chef/pull/32) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [2.1.1](https://github.com/codenamephp/chef.cookbook.chef/tree/2.1.1) (2020-06-26)
 
