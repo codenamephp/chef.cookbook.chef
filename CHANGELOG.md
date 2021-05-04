@@ -10,6 +10,10 @@
 - Set unified\_mode true in all resources [\#35](https://github.com/codenamephp/chef.cookbook.chef/pull/35) ([bastianschwarz](https://github.com/bastianschwarz))
 - Add repository resource with option for channel [\#29](https://github.com/codenamephp/chef.cookbook.chef/pull/29) ([bastianschwarz](https://github.com/bastianschwarz))
 
+**Merged pull requests:**
+
+- Bump tubone24/update\_release from v1.1.0 to v1.2.0 [\#34](https://github.com/codenamephp/chef.cookbook.chef/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [2.1.1](https://github.com/codenamephp/chef.cookbook.chef/tree/2.1.1) (2020-06-26)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/2.1.0...2.1.1)
