@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased](https://github.com/codenamephp/chef.cookbook.chef/tree/HEAD)
+## [3.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.0) (2021-05-04)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/3.0.0...HEAD)
 
@@ -27,6 +27,10 @@
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/2.1.0...2.1.1)
 
+**Implemented enhancements:**
+
+- Set unified\_mode true in all resources [\#35](https://github.com/codenamephp/chef.cookbook.chef/pull/35) ([bastianschwarz](https://github.com/bastianschwarz))
+
 **Fixed bugs:**
 
 - Warning when starting bash [\#25](https://github.com/codenamephp/chef.cookbook.chef/issues/25)
@@ -43,6 +47,7 @@
 **Implemented enhancements:**
 
 - Added local dokken yml to env var [\#23](https://github.com/codenamephp/chef.cookbook.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
+- \[RELEASE 2.1.0\] [\#14](https://github.com/codenamephp/chef.cookbook.chef/pull/14) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Merged pull requests:**
 
@@ -62,7 +67,6 @@
 - Update travis build [\#9](https://github.com/codenamephp/chef.cookbook.chef/issues/9)
 - \[RELEASE 2.1.0\] [\#16](https://github.com/codenamephp/chef.cookbook.chef/pull/16) ([bastianschwarz](https://github.com/bastianschwarz))
 - \[RELEASE 2.1.0\] [\#15](https://github.com/codenamephp/chef.cookbook.chef/pull/15) ([bastianschwarz](https://github.com/bastianschwarz))
-- \[RELEASE 2.1.0\] [\#14](https://github.com/codenamephp/chef.cookbook.chef/pull/14) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Closed issues:**
 
