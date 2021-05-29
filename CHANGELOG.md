@@ -1,11 +1,20 @@
 # Changelog
 
-## [3.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.0) (2021-05-04)
+## [Unreleased](https://github.com/codenamephp/chef.cookbook.chef/tree/HEAD)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/3.0.0...HEAD)
 
+**Merged pull requests:**
+
+- Bump actions/checkout from 2 to 2.3.4 [\#41](https://github.com/codenamephp/chef.cookbook.chef/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [3.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.0) (2021-05-04)
+
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/2.1.1...3.0.0)
+
 **Implemented enhancements:**
 
+- Add option to select current/stable repo [\#28](https://github.com/codenamephp/chef.cookbook.chef/issues/28)
 - Set unified\_mode true in all resources [\#35](https://github.com/codenamephp/chef.cookbook.chef/pull/35) ([bastianschwarz](https://github.com/bastianschwarz))
 - Add repository resource with option for channel [\#29](https://github.com/codenamephp/chef.cookbook.chef/pull/29) ([bastianschwarz](https://github.com/bastianschwarz))
 
@@ -15,21 +24,9 @@
 - Bump bobheadxi/deployments from v0.4.3 to v0.5.2 [\#33](https://github.com/codenamephp/chef.cookbook.chef/pull/33) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump dev-drprasad/delete-tag-and-release from v0.1.3 to v0.2.0 [\#32](https://github.com/codenamephp/chef.cookbook.chef/pull/32) ([dependabot[bot]](https://github.com/apps/dependabot))
 
-## [3.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.0) (2021-05-04)
-
-[Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/2.1.1...3.0.0)
-
-**Implemented enhancements:**
-
-- Add option to select current/stable repo [\#28](https://github.com/codenamephp/chef.cookbook.chef/issues/28)
-
 ## [2.1.1](https://github.com/codenamephp/chef.cookbook.chef/tree/2.1.1) (2020-06-26)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/2.1.0...2.1.1)
-
-**Implemented enhancements:**
-
-- Set unified\_mode true in all resources [\#35](https://github.com/codenamephp/chef.cookbook.chef/pull/35) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Fixed bugs:**
 
@@ -47,7 +44,6 @@
 **Implemented enhancements:**
 
 - Added local dokken yml to env var [\#23](https://github.com/codenamephp/chef.cookbook.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
-- \[RELEASE 2.1.0\] [\#14](https://github.com/codenamephp/chef.cookbook.chef/pull/14) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Merged pull requests:**
 
@@ -67,6 +63,7 @@
 - Update travis build [\#9](https://github.com/codenamephp/chef.cookbook.chef/issues/9)
 - \[RELEASE 2.1.0\] [\#16](https://github.com/codenamephp/chef.cookbook.chef/pull/16) ([bastianschwarz](https://github.com/bastianschwarz))
 - \[RELEASE 2.1.0\] [\#15](https://github.com/codenamephp/chef.cookbook.chef/pull/15) ([bastianschwarz](https://github.com/bastianschwarz))
+- \[RELEASE 2.1.0\] [\#14](https://github.com/codenamephp/chef.cookbook.chef/pull/14) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Closed issues:**
 
