@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#42](https://github.com/codenamephp/chef.cookbook.chef/pull/42) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/checkout from 2 to 2.3.4 [\#41](https://github.com/codenamephp/chef.cookbook.chef/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [3.0.0](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.0) (2021-05-04)
