@@ -1,11 +1,12 @@
 # Changelog
 
-## [3.0.1](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.1) (2021-10-18)
+## [3.0.1](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.1) (2021-11-03)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/3.0.0...3.0.1)
 
 **Merged pull requests:**
 
+- Bump bobheadxi/deployments from 0.6.0 to 0.6.1 [\#44](https://github.com/codenamephp/chef.cookbook.chef/pull/44) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/checkout from 2.3.4 to 2.3.5 [\#43](https://github.com/codenamephp/chef.cookbook.chef/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#42](https://github.com/codenamephp/chef.cookbook.chef/pull/42) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/checkout from 2 to 2.3.4 [\#41](https://github.com/codenamephp/chef.cookbook.chef/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
