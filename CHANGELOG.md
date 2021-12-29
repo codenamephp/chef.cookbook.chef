@@ -1,11 +1,12 @@
 # Changelog
 
-## [3.0.1](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.1) (2021-11-08)
+## [3.0.1](https://github.com/codenamephp/chef.cookbook.chef/tree/3.0.1) (2021-12-29)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.chef/compare/3.0.0...3.0.1)
 
 **Merged pull requests:**
 
+- Bump bobheadxi/deployments from 0.6.1 to 0.6.2 [\#46](https://github.com/codenamephp/chef.cookbook.chef/pull/46) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump tubone24/update\_release from 1.2.0 to 1.3.1 [\#45](https://github.com/codenamephp/chef.cookbook.chef/pull/45) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump bobheadxi/deployments from 0.6.0 to 0.6.1 [\#44](https://github.com/codenamephp/chef.cookbook.chef/pull/44) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/checkout from 2.3.4 to 2.3.5 [\#43](https://github.com/codenamephp/chef.cookbook.chef/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
@@ -24,7 +25,6 @@
 
 **Merged pull requests:**
 
-- Bump tubone24/update\_release from v1.1.0 to v1.2.0 [\#34](https://github.com/codenamephp/chef.cookbook.chef/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump bobheadxi/deployments from v0.4.3 to v0.5.2 [\#33](https://github.com/codenamephp/chef.cookbook.chef/pull/33) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump dev-drprasad/delete-tag-and-release from v0.1.3 to v0.2.0 [\#32](https://github.com/codenamephp/chef.cookbook.chef/pull/32) ([dependabot[bot]](https://github.com/apps/dependabot))
 
@@ -39,6 +39,7 @@
 
 **Merged pull requests:**
 
+- Bump tubone24/update\_release from v1.1.0 to v1.2.0 [\#34](https://github.com/codenamephp/chef.cookbook.chef/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
 - \[CHANGELOG\] 2.1.1 [\#24](https://github.com/codenamephp/chef.cookbook.chef/pull/24) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [2.1.0](https://github.com/codenamephp/chef.cookbook.chef/tree/2.1.0) (2020-06-26)
